@@ -1,0 +1,17 @@
+{
+    "name": "glissplus/magento-worldline",
+    "description": "Worldline Direct (CAWL) Hosted Checkout payment module for Magento 1.x",
+    "type": "magento-module",
+    "license": "proprietary",
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "magento-root-dir": "."
+    }
+}

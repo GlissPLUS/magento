@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Glissplus_Worldline - Worldline Direct (CAWL) Hosted Checkout payment module.
+ *
+ * Module declaration file. Enables the module and places it in the "community"
+ * code pool.
+ */
+-->
+<config>
+    <modules>
+        <Glissplus_Worldline>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Payment/>
+            </depends>
+        </Glissplus_Worldline>
+    </modules>
+</config>

@@ -1,0 +1,6 @@
+# modman mapping for the Glissplus_Worldline module.
+# Use with the modman tool or magento-composer-installer to symlink/copy the
+# module into a Magento 1.x root that lives outside this repository.
+app/etc/modules/Glissplus_Worldline.xml    app/etc/modules/Glissplus_Worldline.xml
+app/code/community/Glissplus/Worldline     app/code/community/Glissplus/Worldline
+app/locale/fr_FR/Glissplus_Worldline.csv   app/locale/fr_FR/Glissplus_Worldline.csv
