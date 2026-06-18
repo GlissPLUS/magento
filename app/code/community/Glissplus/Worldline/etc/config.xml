@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Glissplus_Worldline - module configuration.
+ *
+ * Declares the module version, models/blocks/helpers, the frontend router that
+ * serves the redirect / return / webhook controllers, and the default payment
+ * method configuration. Real PSP secrets are NEVER stored here: they are entered
+ * (encrypted) in the Magento admin under Sales > Payment Methods > Worldline.
+ */
+-->
+<config>
+    <modules>
+        <Glissplus_Worldline>
+            <version>1.0.0</version>
+        </Glissplus_Worldline>
+    </modules>
+
+    <global>
+        <models>
+            <worldline>
+                <class>Glissplus_Worldline_Model</class>
+            </worldline>
+        </models>
+        <blocks>
+            <worldline>
+                <class>Glissplus_Worldline_Block</class>
+            </worldline>
+        </blocks>
+        <helpers>
+            <worldline>
+                <class>Glissplus_Worldline_Helper</class>
+            </worldline>
+        </helpers>
+        <resources>
+            <worldline_setup>
+                <setup>
+                    <module>Glissplus_Worldline</module>
+                </setup>
+            </worldline_setup>
+        </resources>
+    </global>
+
+    <frontend>
+        <routers>
+            <worldline>
+                <use>standard</use>
+                <args>
+                    <module>Glissplus_Worldline</module>
+                    <frontName>worldline</frontName>
+                </args>
+            </worldline>
+        </routers>
+        <translate>
+            <modules>
+                <Glissplus_Worldline>
+                    <files>
+                        <default>Glissplus_Worldline.csv</default>
+                    </files>
+                </Glissplus_Worldline>
+            </modules>
+        </translate>
+    </frontend>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Glissplus_Worldline>
+                    <files>
+                        <default>Glissplus_Worldline.csv</default>
+                    </files>
+                </Glissplus_Worldline>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <payment>
+            <worldline>
+                <active>0</active>
+                <model>worldline/standard</model>
+                <title>Carte bancaire (Worldline)</title>
+                <environment>test</environment>
+                <payment_action>authorize_capture</payment_action>
+                <order_status>pending_payment</order_status>
+                <allowspecific>0</allowspecific>
+                <hosted_variant>SimplifiedCustomPaymentPage</hosted_variant>
+                <sort_order>10</sort_order>
+            </worldline>
+        </payment>
+    </default>
+</config>

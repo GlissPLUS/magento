@@ -1,0 +1,9 @@
+# Magento runtime / build artifacts (never commit secrets or caches)
+/var/
+/media/
+/downloader/
+/app/etc/local.xml
+/vendor/
+/composer.lock
+*.log
+.DS_Store
