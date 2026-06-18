@@ -130,8 +130,8 @@ class Glissplus_Worldline_Model_Standard extends Mage_Payment_Model_Method_Abstr
 
         // directSale (authorize+capture) vs finalAuthorization (authorize only).
         $captureMode = $this->getConfigData('payment_action') === self::ACTION_AUTHORIZE
-            ? 'finalAuthorization'
-            : 'directSale';
+            ? 'FINAL_AUTHORIZATION'
+            : 'SALE';
 
         $body = array(
             'hostedCheckoutSpecificInput' => array(
